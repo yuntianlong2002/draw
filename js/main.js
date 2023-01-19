@@ -35,7 +35,7 @@ Board.dom.addEventListener('pointerleave', pointerCancel);
 
 // Draw method
 function drawOnCanvas(e, pointerObj, Pen) {
-  if (pointerObj) {
+  if (pointerObj && e.pointerType === 'pen') {
     pointerObj.set(Board.getPointerPos(e));
     Pen.setPen(Board.ctx, e);
 
